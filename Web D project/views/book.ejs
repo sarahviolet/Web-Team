@@ -1,0 +1,82 @@
+<!-- manage.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/blue2.png" alt="Logo">
+            </div>
+            <div class="teamlogo">
+                <img src="/team.png" alt="team Logo">
+            </div>
+            <ul>
+                <li><a href="/" onclick="showDiscover()">Home</a></li>
+                <li><a href="discover" onclick="showDiscover()">Discover</a></li>
+                <li><a href="book" onclick="showBookForm()">Book</a></li>
+                <li><a href="#" onclick="showCreateForm()">Contact</a></li>
+                <li><a href="#" onclick="showCreateForm()"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="manage" class="manage">
+            <h2>Manage Bookings</h2>
+            
+            <!-- Form to create a new booking -->
+            <form id="addBookingForm" onsubmit="addBooking(event)">
+                <h3>Create Booking</h3>
+                
+                <label for="tripType">Trip Type:</label>
+                <input type="checkbox" id="tripTypeAdd" name="tripType" value="oneway" required>
+                <span>One Way</span>
+                
+                <input type="checkbox" id="tripTypeAddRound" name="tripType" value="roundtrip">
+                <span>Round Trip</span>
+                
+                
+y                <label for="departureDate">Departure Date:</label>
+                <input type="date" id="departureDateAdd" required>
+
+                <label for="returnDate">Return Date:</label>
+                <input type="date" id="returnDateAdd">
+
+                <label for="passengerCount">Passenger Count:</label>
+                <input type="number" id="passengerCountAdd" required>
+
+                <label for="passengerAge">Passenger Age:</label>
+                <input type="number" id="passengerAgeAdd" required>
+
+                <button type="submit">Add Booking</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Trip Type</th>
+                        <th>Departure Date</th>
+                        <th>Return Date</th>
+                        <th>Passenger Count</th>
+                        <th>Passenger Age</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingList">
+                    <!-- Booked trips will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
