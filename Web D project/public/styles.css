@@ -1,0 +1,48 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px; height: 100px; /* Adjust the width as needed */
+    margin-right: 80px;
+}
+.teamlogo img {
+    width: 50px; height: 50px; /* Adjust the width as needed */
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    color: rgb(27, 57, 154);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
